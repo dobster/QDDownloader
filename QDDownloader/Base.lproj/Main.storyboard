@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QDDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nowra.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="KGS-xm-x1J">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7c-dk-x8G">
+                                <rect key="frame" x="982" y="726" width="22" height="22"/>
+                                <connections>
+                                    <action selector="goButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wYx-R1-5C0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KGS-xm-x1J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0nk-RV-iGh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x7c-dk-x8G" secondAttribute="trailing" constant="20" id="C9o-6T-HwG"/>
+                            <constraint firstItem="KGS-xm-x1J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D55-fw-Dam"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x7c-dk-x8G" secondAttribute="bottom" constant="20" id="Dj8-zz-jd3"/>
+                            <constraint firstItem="KGS-xm-x1J" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="XK8-vr-4cO"/>
+                            <constraint firstItem="KGS-xm-x1J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ePA-Ha-rnj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="qHg-nQ-liT" kind="presentation" identifier="DownloadPopoverSegue" modalPresentationStyle="formSheet" id="1IM-pH-vsc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="346.875" y="137.5"/>
+        </scene>
+        <!--Downloader View Controller-->
+        <scene sceneID="c26-pX-3Ao">
+            <objects>
+                <viewController id="7vi-bg-Wdo" customClass="DownloaderViewController" customModule="QDDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NW5-96-Wdt">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zY8-Gq-gzr">
+                                <rect key="frame" x="20" y="199" width="360" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tO-jU-fwk">
+                                <rect key="frame" x="20" y="176.5" width="84" height="14.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating to ARINC 1809" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrX-Sn-v7o">
+                                <rect key="frame" x="61" y="90" width="278.5" height="32"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zY8-Gq-gzr" firstAttribute="top" secondItem="5tO-jU-fwk" secondAttribute="bottom" constant="8" id="I08-4i-Ezj"/>
+                            <constraint firstItem="FrX-Sn-v7o" firstAttribute="centerX" secondItem="NW5-96-Wdt" secondAttribute="centerX" id="R6X-OF-5Je"/>
+                            <constraint firstItem="zY8-Gq-gzr" firstAttribute="trailing" secondItem="NW5-96-Wdt" secondAttribute="trailingMargin" id="eKo-26-qXC"/>
+                            <constraint firstItem="zY8-Gq-gzr" firstAttribute="leading" secondItem="NW5-96-Wdt" secondAttribute="leadingMargin" id="fnf-4K-e8g"/>
+                            <constraint firstItem="FrX-Sn-v7o" firstAttribute="top" secondItem="bQV-a5-gOE" secondAttribute="top" constant="20" id="gNc-q6-1xu"/>
+                            <constraint firstItem="5tO-jU-fwk" firstAttribute="leading" secondItem="zY8-Gq-gzr" secondAttribute="leading" id="jgE-Xo-UQZ"/>
+                            <constraint firstItem="zY8-Gq-gzr" firstAttribute="centerY" secondItem="NW5-96-Wdt" secondAttribute="centerY" id="npz-l6-aOB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bQV-a5-gOE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wwq-ei-VyU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="zFn-Ml-JdT">
+                            <connections>
+                                <segue destination="9Se-e4-AZQ" kind="unwind" unwindAction="unwindToMasterViewControllerWithSender:" id="o3o-TO-kuv"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="400"/>
+                    <size key="freeformSize" width="400" height="400"/>
+                    <connections>
+                        <outlet property="progressView" destination="zY8-Gq-gzr" id="Sxz-Zx-68H"/>
+                        <segue destination="4gq-te-GR3" kind="show" identifier="DownloadFinishedSegue" id="Nkz-fG-Jrl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIa-tu-dg2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9Se-e4-AZQ" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1330.6640625" y="122.65625"/>
+        </scene>
+        <!--Download Finished View Controller-->
+        <scene sceneID="3wz-vg-Tqb">
+            <objects>
+                <viewController id="4gq-te-GR3" customClass="DownloadFinishedViewController" customModule="QDDownloader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kyl-FK-Pil">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDB-Le-1Pz" customClass="PrimaryButton" customModule="QDDownloader" customModuleProvider="target">
+                                <rect key="frame" x="20" y="316" width="360" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UzY-bh-M7g"/>
+                                </constraints>
+                                <state key="normal" title="OK"/>
+                                <connections>
+                                    <segue destination="v8d-Rh-k24" kind="unwind" unwindAction="unwindToMasterViewControllerWithSender:" id="Snr-xM-8uu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARINC 1809 Navdata installed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zz7-d4-DWt">
+                                <rect key="frame" x="97.5" y="191" width="205" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlL-mM-zWE">
+                                <rect key="frame" x="166.5" y="162" width="67.5" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tlL-mM-zWE" firstAttribute="centerX" secondItem="Kyl-FK-Pil" secondAttribute="centerX" id="5yk-Ee-Bnx"/>
+                            <constraint firstItem="j5H-og-8pE" firstAttribute="trailing" secondItem="eDB-Le-1Pz" secondAttribute="trailing" constant="20" id="Ij7-OH-GaW"/>
+                            <constraint firstItem="j5H-og-8pE" firstAttribute="bottom" secondItem="eDB-Le-1Pz" secondAttribute="bottom" constant="40" id="StR-Kx-EKG"/>
+                            <constraint firstItem="Zz7-d4-DWt" firstAttribute="centerY" secondItem="Kyl-FK-Pil" secondAttribute="centerY" id="kIp-uQ-YND"/>
+                            <constraint firstItem="Zz7-d4-DWt" firstAttribute="centerX" secondItem="Kyl-FK-Pil" secondAttribute="centerX" id="qm6-oY-sAV"/>
+                            <constraint firstItem="Zz7-d4-DWt" firstAttribute="top" secondItem="tlL-mM-zWE" secondAttribute="bottom" constant="8" id="tib-AW-SlC"/>
+                            <constraint firstItem="eDB-Le-1Pz" firstAttribute="leading" secondItem="j5H-og-8pE" secondAttribute="leading" constant="20" id="uaH-VQ-dNl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j5H-og-8pE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwQ-tM-KKg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="v8d-Rh-k24" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1683.984375" y="122.65625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n38-hK-p76">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qHg-nQ-liT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="400"/>
+                    <size key="freeformSize" width="400" height="400"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7P4-gs-pWh">
+                        <rect key="frame" x="0.0" y="20" width="400" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7vi-bg-Wdo" kind="relationship" relationship="rootViewController" id="W53-am-zs0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uE-hs-1Dv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nowra.jpg" width="1503" height="1002"/>
+    </resources>
+</document>
