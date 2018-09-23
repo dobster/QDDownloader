@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47D18A1121571AE40043289A /* SuccessIcon@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D18A0E21571AE20043289A /* SuccessIcon@1x.png */; };
+		47D18A1221571AE40043289A /* SuccessIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D18A0F21571AE30043289A /* SuccessIcon@2x.png */; };
+		47D18A1321571AE40043289A /* SuccessIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 47D18A1021571AE40043289A /* SuccessIcon@3x.png */; };
 		47DE92542156F2C300B959C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE92532156F2C300B959C5 /* AppDelegate.swift */; };
 		47DE92562156F2C300B959C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DE92552156F2C300B959C5 /* ViewController.swift */; };
 		47DE92592156F2C300B959C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47DE92572156F2C300B959C5 /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47D18A0E21571AE20043289A /* SuccessIcon@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SuccessIcon@1x.png"; sourceTree = "<group>"; };
+		47D18A0F21571AE30043289A /* SuccessIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SuccessIcon@2x.png"; sourceTree = "<group>"; };
+		47D18A1021571AE40043289A /* SuccessIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SuccessIcon@3x.png"; sourceTree = "<group>"; };
 		47DE92502156F2C200B959C5 /* QDDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QDDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47DE92532156F2C300B959C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47DE92552156F2C300B959C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +68,9 @@
 		47DE92522156F2C300B959C5 /* QDDownloader */ = {
 			isa = PBXGroup;
 			children = (
+				47D18A0E21571AE20043289A /* SuccessIcon@1x.png */,
+				47D18A0F21571AE30043289A /* SuccessIcon@2x.png */,
+				47D18A1021571AE40043289A /* SuccessIcon@3x.png */,
 				47DE92652156F3F700B959C5 /* nowra.jpg */,
 				47DE92532156F2C300B959C5 /* AppDelegate.swift */,
 				47DE92552156F2C300B959C5 /* ViewController.swift */,
@@ -135,9 +144,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				47DE925E2156F2C600B959C5 /* LaunchScreen.storyboard in Resources */,
+				47D18A1221571AE40043289A /* SuccessIcon@2x.png in Resources */,
 				47DE925B2156F2C600B959C5 /* Assets.xcassets in Resources */,
 				47DE92592156F2C300B959C5 /* Main.storyboard in Resources */,
+				47D18A1321571AE40043289A /* SuccessIcon@3x.png in Resources */,
 				47DE92662156F3F700B959C5 /* nowra.jpg in Resources */,
+				47D18A1121571AE40043289A /* SuccessIcon@1x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

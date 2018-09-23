@@ -13,7 +13,6 @@ class DownloadFinishedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
 

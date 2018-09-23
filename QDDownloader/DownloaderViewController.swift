@@ -17,7 +17,10 @@ class DownloaderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         progressView.progress = 0
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +42,9 @@ class DownloaderViewController: UIViewController {
     
     func progresToFinishWindow() {
         DispatchQueue.main.async {
+            self.progressView.progress = 1.0
+        }
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + DispatchTimeInterval.seconds(1)) {
             self.performSegue(withIdentifier: "DownloadFinishedSegue", sender: self)
         }
     }
